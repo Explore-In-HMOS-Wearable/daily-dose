@@ -1,0 +1,125 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "pill_dailydose",
+      "value": "💊 DailyDose"
+    },
+    {
+      "name": "view_reminder_list",
+      "value": "📋 View Reminder List"
+    },
+    {
+      "name": "ready",
+      "value": "Ready"
+    },
+    {
+      "name": "invalid_time_in_seconds",
+      "value": "Invalid time in seconds."
+    },
+    {
+      "name": "fill_in_title_and_content",
+      "value": "Fill in title and content."
+    },
+    {
+      "name": "reminder_created",
+      "value": "Reminder created."
+    },
+    {
+      "name": "failed",
+      "value": "Failed"
+    },
+    {
+      "name": "medicine",
+      "value": "Medicine"
+    },
+    {
+      "name": "notification_granted",
+      "value": "Notification permission granted"
+    },
+    {
+      "name": "message",
+      "value": "Message"
+    },
+    {
+      "name": "time_seconds",
+      "value": "Time (seconds)"
+    },
+    {
+      "name": "save_reminder",
+      "value": "💾 Save Reminder"
+    },
+    {
+      "name": "active_reminders",
+      "value": "🔔\nActive\nReminders"
+    },
+    {
+      "name": "last_action",
+      "value": "📌 Last Action:"
+    },
+    {
+      "name": "last_reminder",
+      "value": "🆕 Last Reminder:"
+    },
+    {
+      "name": "back",
+      "value": "←"
+    },
+    {
+      "name": "no_active_reminders",
+      "value": "No active reminders."
+    },
+    {
+      "name": "error_loading_reminders",
+      "value": "Error loading reminders :"
+    },
+    {
+      "name": "pill",
+      "value": "💊"
+    },
+    {
+      "name": "hour",
+      "value": "Hour:"
+    },
+    {
+      "name": "pages",
+      "value": "pages:"
+    },
+    {
+      "name": "alarm",
+      "value": "alarm:"
+    },
+    {
+      "name": "reminder_list_page",
+      "value": "ReminderListPage:"
+    },
+
+    {
+      "name": "minute",
+      "value": "Minute:"
+    },
+    {
+      "name": "save_save",
+      "value": "💾 Save"
+    },
+    {
+      "name": "saved_with_id",
+      "value": "Saved with ID"
+    },
+    {
+      "name": "failed_to_save_reminder",
+      "value": "Failed to save reminder"
+    }
+  ]
+}

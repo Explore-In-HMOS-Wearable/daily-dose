@@ -1,0 +1,165 @@
+{
+  "float": [
+    {
+      "name": "m_0",
+      "value": "0fp"
+    },
+    {
+      "name": "m_4",
+      "value": "4fp"
+    },
+    {
+      "name": "m_8",
+      "value": "8fp"
+    },
+    {
+      "name": "m_10",
+      "value": "10fp"
+    },
+    {
+      "name": "m_12",
+      "value": "12fp"
+    },
+    {
+      "name": "m_16",
+      "value": "16fp"
+    },
+    {
+      "name": "m_20",
+      "value": "20fp"
+    },
+    {
+      "name": "mt_10",
+      "value": "10fp"
+    },
+    {
+      "name": "mb_10",
+      "value": "10fp"
+    },
+    {
+      "name": "ml_10",
+      "value": "10fp"
+    },
+    {
+      "name": "mr_10",
+      "value": "10fp"
+    },
+    {
+      "name": "p_4",
+      "value": "4fp"
+    },
+    {
+      "name": "p_8",
+      "value": "8fp"
+    },
+    {
+      "name": "p_12",
+      "value": "12fp"
+    },
+    {
+
+      "name": "p_16",
+      "value": "16fp"
+    },
+    {
+
+      "name": "pt_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "pb_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "pl_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "pr_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "font_8",
+      "value": "8fp"
+    },
+    {
+
+      "name": "font_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "font_12",
+      "value": "12fp"
+    },
+    {
+
+      "name": "font_14",
+      "value": "14fp"
+    },
+    {
+
+      "name": "font_16",
+      "value": "16fp"
+    },
+    {
+
+      "name": "font_18",
+      "value": "18fp"
+    },
+    {
+
+      "name": "font_20",
+      "value": "20fp"
+    },
+    {
+
+      "name": "radius_4",
+      "value": "4fp"
+    },
+    {
+
+      "name": "radius_6",
+      "value": "6fp"
+    },
+    {
+
+      "name": "radius_8",
+      "value": "8fp"
+    },
+    {
+
+      "name": "radius_10",
+      "value": "10fp"
+    },
+    {
+
+      "name": "w_100",
+      "value": "100fp"
+    },
+    {
+
+      "name": "w_200",
+      "value": "200fp"
+    },
+    {
+
+      "name": "h_30",
+      "value": "30fp"
+    },
+    {
+
+      "name": "h_40",
+      "value": "40fp"
+    },
+    {
+
+      "name": "h_50",
+      "value": "50fp"
+    }
+  ]
+}

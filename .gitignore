@@ -1,0 +1,29 @@
+# Ignore module and build files
+/node_modules
+/oh_modules
+**/build
+/.preview
+
+# Ignore local and IDE files
+/.idea
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+/.VSCodeCounter
+
+# Ignore test files
+**/.test
+
+# Ignore app analyzer files
+/.appanalyzer
+/.preview
+
+# Ignore certificate and key files
+*.p12
+*.p7b
+*.cer
+*.csr
+
+/local.properties
