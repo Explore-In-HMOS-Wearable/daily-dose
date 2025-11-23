@@ -9,7 +9,10 @@ export class MedicineViewModel {
   @Trace notificationId : number = 1000
   @Trace reminderId: number = -1;
 
-   async createReminder( tempReminderTime: string, tempReminderTitle: string, tempReminderContent: string, context: common.UIAbilityContext) {
+   async createReminder( tempReminderTime: string,
+     tempReminderTitle: string,
+     tempReminderContent: string,
+     context: common.UIAbilityContext) {
     const timeInSeconds = parseInt(tempReminderTime);
     if (isNaN(timeInSeconds) || timeInSeconds <= 0) {
       this.reminderStatus = context.resourceManager

@@ -1,0 +1,12 @@
+{
+  "routerMap": [
+    {
+      "name": "ReminderListPage",
+      "pageSourceFile": "src/main/ets/pages/ReminderListPage.ets",
+      "buildFunction": "ReminderListPageBuilder",
+      "data": {
+        "description": "ReminderListPage page"
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 import { common } from '@kit.AbilityKit'
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute, router, ComponentContent } from '@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute, ComponentContent } from '@kit.ArkUI';
 import { requestNotificationPermission } from '../utils/RequestPermission'
 import { MedicineInput } from '../view/MedicineInput'
 import { MedicineViewModel } from '../viewmodel/MedicineViewModel'
-
+import { Reminder } from './ReminderListPage'
 @Builder
 function buildText() {
   Column() {
@@ -29,67 +29,70 @@ struct MainPage {
   @State notificationId: number = 1000;
   header: ComponentContent<Object> = new ComponentContent(this.getUIContext(), wrapBuilder(buildText));
   medicineViewModel: MedicineViewModel = new MedicineViewModel();
+  pathStack: NavPathStack = new NavPathStack()
 
   aboutToAppear() {
     requestNotificationPermission(this.context)
   }
 
   build() {
-    ArcList({
-      initialIndex: 0, header: this.header
-    }) {
-      ArcListItem() {
-        MedicineInput({ reminderAnyText: this.reminderTitle, inputName: $r('app.string.medicine'), isTime: false })
-      }
-      .margin({ bottom: 10 })
+    Navigation(this.pathStack) {
+      ArcList({
+        initialIndex: 0, header: this.header
+      }) {
+        ArcListItem() {
+          MedicineInput({ reminderAnyText: this.reminderTitle, inputName: $r('app.string.medicine'), isTime: false })
+        }
+        .margin({ bottom: 10 })
 
-      ArcListItem() {
-        MedicineInput({ reminderAnyText: this.reminderContent, inputName: $r('app.string.message'), isTime: false })
-      }
-      .margin({ bottom: 10 })
+        ArcListItem() {
+          MedicineInput({ reminderAnyText: this.reminderContent, inputName: $r('app.string.message'), isTime: false })
+        }
+        .margin({ bottom: 10 })
 
-      ArcListItem() {
-        MedicineInput({ reminderAnyText: this.reminderTime, inputName: $r('app.string.time_seconds'), isTime: true })
-      }
-      .margin({ bottom: 10 })
+        ArcListItem() {
+          MedicineInput({ reminderAnyText: this.reminderTime, inputName: $r('app.string.time_seconds'), isTime: true })
+        }
+        .margin({ bottom: 10 })
 
-      ArcListItem() {
-        Button($r('app.string.save_reminder'))
-          .onClick(() => {
-            this.resetAndBackupReminderFields()
-            this.medicineViewModel
-              .createReminder(this.tempReminderTime, this.tempReminderTitle, this.tempReminderContent, this.context)
-          })
-          .buttonsStyle()
-      }
-      .margin({ bottom: 10 })
-
-      ArcListItem() {
-        Button($r('app.string.view_reminder_list'))
-          .onClick(() => {
-            router.pushUrl({
-              url: 'pages/ReminderListPage',
-              params: {
-                latestTitle: this.tempReminderTitle,
-                latestContent: this.tempReminderContent,
-                latestStatus: this.medicineViewModel.reminderStatus
-              }
+        ArcListItem() {
+          Button($r('app.string.save_reminder'))
+            .onClick(() => {
+              this.resetAndBackupReminderFields()
+              this.medicineViewModel
+                .createReminder(this.tempReminderTime, this.tempReminderTitle, this.tempReminderContent, this.context)
             })
-          })
-          .buttonsStyle()
-      }
-      .margin({ bottom: 10 })
+            .buttonsStyle()
+        }
+        .margin({ bottom: 10 })
 
-      ArcListItem() {
-        Text(this.medicineViewModel.reminderStatus)
-          .fontSize(13)
-          .fontColor(Color.Gray)
-          .margin({ top: 2 })
+        ArcListItem() {
+          Button($r('app.string.view_reminder_list'))
+            .onClick(() => {
+              this.pathStack.pushPathByName(
+                'ReminderListPage',
+                new Reminder(this.tempReminderTitle, this.tempReminderContent, this.medicineViewModel.reminderStatus)
+              )
+            })
+            .buttonsStyle()
+        }
+        .margin({ bottom: 10 })
+
+        ArcListItem() {
+          Text(this.medicineViewModel.reminderStatus)
+            .fontSize(13)
+            .fontColor(Color.Gray)
+            .margin({ top: 2 })
+        }
+        .margin({ bottom: 10 })
       }
-      .margin({ bottom: 10 })
+      .height('100%')
+      .width('100%')
     }
     .height('100%')
     .width('100%')
+    .hideTitleBar(true)
+    .mode(NavigationMode.Stack)
   }
 
   resetAndBackupReminderFields() {
